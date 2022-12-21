@@ -2,9 +2,9 @@ package com.mslc;
 
 public class AsignarCuenta {
 
-	public static int edad = 18;
-	public static boolean estudiante = true;
-	public static boolean independizado = true; 
+	final static int edad = 18;
+	final static boolean estudiante = true;
+	final static boolean independizado = true; 
 
 	public static void main(String[]args) {
 		
