@@ -2,13 +2,13 @@
 
 <span class="nc" id="L3">public class AsignarCuenta {</span>
 
-	final private static int EDAD = 18;
-	final private static boolean ESTUDIANTE = true;
-	final private static boolean INDEPENDIZADO = true; 
+<span class="fc" id="L5">	public static int edad = 18;</span>
+<span class="fc" id="L6">	public static boolean estudiante = true;</span>
+<span class="fc" id="L7">	public static boolean independizado = true; </span>
 
 	public static void main(String[]args) {
 		
-<span class="nc" id="L11">		Cliente cliente = new Cliente(EDAD, ESTUDIANTE, INDEPENDIZADO);</span>
+<span class="nc" id="L11">		Cliente cliente = new Cliente(edad, estudiante, independizado);</span>
 		
 <span class="nc" id="L13">		String cuenta = comprobar(cliente);</span>
 		
@@ -20,37 +20,26 @@
 <span class="fc" id="L20">		int edad = cliente.getEdad();</span>
 <span class="fc" id="L21">		boolean estudiante = cliente.isEstudiante();</span>
 <span class="fc" id="L22">		boolean independizado = cliente.isIndependizado();</span>
-		String cuenta;
 		
-<span class="pc bpc" id="L25" title="1 of 6 branches missed.">		if(edad &lt; 18 &amp;&amp; estudiante &amp;&amp; !independizado){ </span>
-<span class="fc" id="L26">			cuenta = &quot;Cuenta: Comfort&quot;;</span>
-		}
+<span class="pc bpc" id="L24" title="1 of 6 branches missed.">		if(edad &lt; 18 &amp;&amp; estudiante &amp;&amp; !independizado) </span>
+<span class="fc" id="L25">			return &quot;Cuenta: Comfort&quot;;</span>
 		
-<span class="fc bfc" id="L29" title="All 6 branches covered.">		else if(edad &lt; 25 &amp;&amp; estudiante &amp;&amp; independizado){</span>
-<span class="fc" id="L30">			cuenta = &quot;Cuenta: Vamos que tu puedes&quot;;</span>
-		}
+<span class="fc bfc" id="L27" title="All 6 branches covered.">		else if(edad &lt; 25 &amp;&amp; estudiante &amp;&amp; independizado) </span>
+<span class="fc" id="L28">			return &quot;Cuenta: Vamos que tu puedes&quot;;</span>
 		
-<span class="pc bpc" id="L33" title="1 of 8 branches missed.">		else if(edad &gt; 18 &amp;&amp; edad &lt; 25 &amp;&amp; !estudiante &amp;&amp; !independizado){</span>
-<span class="fc" id="L34">			cuenta = &quot;Cuenta: Ahorra ahora que puedes&quot;;</span>
-		}
+<span class="pc bpc" id="L30" title="1 of 8 branches missed.">		else if(edad &gt; 18 &amp;&amp; edad &lt; 25 &amp;&amp; !estudiante &amp;&amp; !independizado) </span>
+<span class="fc" id="L31">			return &quot;Cuenta: Ahorra ahora que puedes&quot;;</span>
 		
-<span class="pc bpc" id="L37" title="2 of 8 branches missed.">		else if(edad &gt; 18 &amp;&amp; edad &lt; 25 &amp;&amp; !estudiante &amp;&amp; independizado){</span>
-<span class="fc" id="L38">			cuenta  = &quot;Cuenta: Saltando del nido&quot;;</span>
-		}
+<span class="pc bpc" id="L33" title="2 of 8 branches missed.">		else if(edad &gt; 18 &amp;&amp; edad &lt; 25 &amp;&amp; !estudiante &amp;&amp; independizado) </span>
+<span class="fc" id="L34">			return &quot;Cuenta: Saltando del nido&quot;;</span>
 		
-<span class="pc bpc" id="L41" title="1 of 6 branches missed.">		else if(edad &gt;= 25 &amp;&amp; !estudiante &amp;&amp; !independizado){</span>
-<span class="fc" id="L42">			cuenta = &quot;Cuenta: Independizate que va siendo hora&quot;;</span>
-		}
+<span class="pc bpc" id="L36" title="1 of 6 branches missed.">		else if(edad &gt;= 25 &amp;&amp; !estudiante &amp;&amp; !independizado)</span>
+<span class="fc" id="L37">			return &quot;Cuenta: Independizate que va siendo hora&quot;;</span>
 		
-<span class="pc bpc" id="L45" title="2 of 6 branches missed.">		else if(edad &gt;= 25 &amp;&amp; !estudiante &amp;&amp; independizado){</span>
-<span class="fc" id="L46">			cuenta = &quot;Cuenta: Bienvenido a la vida adulta&quot;;</span>
-		}
+<span class="pc bpc" id="L39" title="2 of 6 branches missed.">		else if(edad &gt;= 25 &amp;&amp; !estudiante &amp;&amp; independizado) </span>
+<span class="fc" id="L40">			return &quot;Cuenta: Bienvenido a la vida adulta&quot;;</span>
 		
-		else{
-<span class="fc" id="L50">			cuenta = &quot;No existe cuenta bancaria que se ajuste a ese perfil&quot;;</span>
-		}
-		
-<span class="fc" id="L53">		return cuenta;</span>
+<span class="fc" id="L42">		else return &quot;No existe cuenta bancaria que se ajuste a ese perfil&quot;;</span>
 	}
 	
 }
