@@ -20,26 +20,29 @@ public class AsignarCuenta {
 		int edad = cliente.getEdad();
 		boolean estudiante = cliente.isEstudiante();
 		boolean independizado = cliente.isIndependizado();
+		String cuenta;
 		
 		if(edad < 18 && estudiante && !independizado) 
-			return "Cuenta: Comfort";
+			cuenta = "Cuenta: Comfort";
 		
 		else if(edad < 25 && estudiante && independizado) 
-			return "Cuenta: Vamos que tu puedes";
+			cuenta = "Cuenta: Vamos que tu puedes";
 		
 		else if(edad > 18 && edad < 25 && !estudiante && !independizado) 
-			return "Cuenta: Ahorra ahora que puedes";
+			cuenta = "Cuenta: Ahorra ahora que puedes";
 		
 		else if(edad > 18 && edad < 25 && !estudiante && independizado) 
-			return "Cuenta: Saltando del nido";
+			cuenta  = "Cuenta: Saltando del nido";
 		
 		else if(edad >= 25 && !estudiante && !independizado)
-			return "Cuenta: Independizate que va siendo hora";
+			cuenta = "Cuenta: Independizate que va siendo hora";
 		
 		else if(edad >= 25 && !estudiante && independizado) 
-			return "Cuenta: Bienvenido a la vida adulta";
+			cuenta = "Cuenta: Bienvenido a la vida adulta";
 		
-		else return "No existe cuenta bancaria que se ajuste a ese perfil";
+		else cuenta = "No existe cuenta bancaria que se ajuste a ese perfil";
+		
+		return cuenta;
 	}
 	
 }
