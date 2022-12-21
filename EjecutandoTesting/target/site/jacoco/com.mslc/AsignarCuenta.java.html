@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AsignarCuenta.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Ejecutando Testing</a> &gt; <a href="index.source.html" class="el_package">com.mslc</a> &gt; <span class="el_source">AsignarCuenta.java</span></div><h1>AsignarCuenta.java</h1><pre class="source lang-java linenums">package com.mslc;
+
+<span class="nc" id="L3">public class AsignarCuenta {</span>
+
+	final private static int EDAD = 18;
+	final private static boolean ESTUDIANTE = true;
+	final private static boolean INDEPENDIZADO = true; 
+
+	public static void main(String[]args) {
+		
+<span class="nc" id="L11">		Cliente cliente = new Cliente(EDAD, ESTUDIANTE, INDEPENDIZADO);</span>
+		
+<span class="nc" id="L13">		String cuenta = comprobar(cliente);</span>
+		
+<span class="nc" id="L15">		System.out.println(cuenta);</span>
+<span class="nc" id="L16">	}</span>
+	
+	public static String comprobar(Cliente cliente) {
+		
+<span class="fc" id="L20">		int edad = cliente.getEdad();</span>
+<span class="fc" id="L21">		boolean estudiante = cliente.isEstudiante();</span>
+<span class="fc" id="L22">		boolean independizado = cliente.isIndependizado();</span>
+		String cuenta;
+		
+<span class="pc bpc" id="L25" title="1 of 6 branches missed.">		if(edad &lt; 18 &amp;&amp; estudiante &amp;&amp; !independizado){ </span>
+<span class="fc" id="L26">			cuenta = &quot;Cuenta: Comfort&quot;;</span>
+<span class="fc" id="L27">		}</span>
+		
+<span class="fc bfc" id="L29" title="All 6 branches covered.">		else if(edad &lt; 25 &amp;&amp; estudiante &amp;&amp; independizado){</span>
+<span class="fc" id="L30">			cuenta = &quot;Cuenta: Vamos que tu puedes&quot;;</span>
+<span class="fc" id="L31">		}</span>
+		
+<span class="pc bpc" id="L33" title="1 of 8 branches missed.">		else if(edad &gt; 18 &amp;&amp; edad &lt; 25 &amp;&amp; !estudiante &amp;&amp; !independizado){</span>
+<span class="fc" id="L34">			cuenta = &quot;Cuenta: Ahorra ahora que puedes&quot;;</span>
+<span class="fc" id="L35">		}</span>
+		
+<span class="pc bpc" id="L37" title="2 of 8 branches missed.">		else if(edad &gt; 18 &amp;&amp; edad &lt; 25 &amp;&amp; !estudiante &amp;&amp; independizado){</span>
+<span class="fc" id="L38">			cuenta  = &quot;Cuenta: Saltando del nido&quot;;</span>
+<span class="fc" id="L39">		}</span>
+		
+<span class="pc bpc" id="L41" title="1 of 6 branches missed.">		else if(edad &gt;= 25 &amp;&amp; !estudiante &amp;&amp; !independizado){</span>
+<span class="fc" id="L42">			cuenta = &quot;Cuenta: Independizate que va siendo hora&quot;;</span>
+<span class="fc" id="L43">		}</span>
+		
+<span class="pc bpc" id="L45" title="2 of 6 branches missed.">		else if(edad &gt;= 25 &amp;&amp; !estudiante &amp;&amp; independizado){</span>
+<span class="fc" id="L46">			cuenta = &quot;Cuenta: Bienvenido a la vida adulta&quot;;</span>
+<span class="fc" id="L47">		}</span>
+		
+		else{
+<span class="fc" id="L50">			cuenta = &quot;No existe cuenta bancaria que se ajuste a ese perfil&quot;;</span>
+		}
+		
+<span class="fc" id="L53">		return cuenta;</span>
+	}
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

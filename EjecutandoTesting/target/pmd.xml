@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.6.1" timestamp="2022-12-21T17:29:53.594">
+<file name="D:\Git\EjecutandoTesting\EjecutandoTesting\src\main\java\com\mslc\AsignarCuenta.java">
+<violation beginline="3" endline="56" begincolumn="28" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="com.mslc" class="AsignarCuenta" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#UseUtilityClass" priority="3">
+All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+</violation>
+<violation beginline="9" endline="9" begincolumn="33" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.mslc" class="AsignarCuenta" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'args' is not assigned and could be declared final
+</violation>
+<violation beginline="11" endline="11" begincolumn="17" endcolumn="78" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.mslc" class="AsignarCuenta" method="main" variable="cliente" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'cliente' could be declared final
+</violation>
+<violation beginline="13" endline="13" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.mslc" class="AsignarCuenta" method="main" variable="cuenta" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'cuenta' could be declared final
+</violation>
+<violation beginline="18" endline="18" begincolumn="40" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.mslc" class="AsignarCuenta" method="comprobar" variable="cliente" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'cliente' is not assigned and could be declared final
+</violation>
+<violation beginline="20" endline="20" begincolumn="17" endcolumn="44" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.mslc" class="AsignarCuenta" method="comprobar" variable="edad" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'edad' could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="17" endcolumn="59" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.mslc" class="AsignarCuenta" method="comprobar" variable="estudiante" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'estudiante' could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="17" endcolumn="65" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.mslc" class="AsignarCuenta" method="comprobar" variable="independizado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'independizado' could be declared final
+</violation>
+</file>
+<file name="D:\Git\EjecutandoTesting\EjecutandoTesting\src\main\java\com\mslc\Cliente.java">
+<violation beginline="9" endline="9" begincolumn="24" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.mslc" class="Cliente" method="Cliente" variable="age" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'age' is not assigned and could be declared final
+</violation>
+<violation beginline="9" endline="9" begincolumn="50" endcolumn="68" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.mslc" class="Cliente" method="Cliente" variable="independent" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'independent' is not assigned and could be declared final
+</violation>
+<violation beginline="9" endline="9" begincolumn="33" endcolumn="47" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.mslc" class="Cliente" method="Cliente" variable="student" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'student' is not assigned and could be declared final
+</violation>
+</file>
+</pmd>
