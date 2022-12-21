@@ -2,13 +2,13 @@ package com.mslc;
 
 public class AsignarCuenta {
 
-	public static int edad = 18;
-	public static boolean estudiante = true;
-	public static boolean independizado = true; 
+	final private static int EDAD = 18;
+	final private static boolean ESTUDIANTE = true;
+	final private static boolean INDEPENDIZADO = true; 
 
 	public static void main(String[]args) {
 		
-		Cliente cliente = new Cliente(edad, estudiante, independizado);
+		Cliente cliente = new Cliente(EDAD, ESTUDIANTE, INDEPENDIZADO);
 		
 		String cuenta = comprobar(cliente);
 		
@@ -20,26 +20,37 @@ public class AsignarCuenta {
 		int edad = cliente.getEdad();
 		boolean estudiante = cliente.isEstudiante();
 		boolean independizado = cliente.isIndependizado();
+		String cuenta;
 		
-		if(edad < 18 && estudiante && !independizado) 
-			return "Cuenta: Comfort";
+		if(edad < 18 && estudiante && !independizado){ 
+			cuenta = "Cuenta: Comfort";
+		}
 		
-		else if(edad < 25 && estudiante && independizado) 
-			return "Cuenta: Vamos que tu puedes";
+		else if(edad < 25 && estudiante && independizado){
+			cuenta = "Cuenta: Vamos que tu puedes";
+		}
 		
-		else if(edad > 18 && edad < 25 && !estudiante && !independizado) 
-			return "Cuenta: Ahorra ahora que puedes";
+		else if(edad > 18 && edad < 25 && !estudiante && !independizado){
+			cuenta = "Cuenta: Ahorra ahora que puedes";
+		}
 		
-		else if(edad > 18 && edad < 25 && !estudiante && independizado) 
-			return "Cuenta: Saltando del nido";
+		else if(edad > 18 && edad < 25 && !estudiante && independizado){
+			cuenta  = "Cuenta: Saltando del nido";
+		}
 		
-		else if(edad >= 25 && !estudiante && !independizado)
-			return "Cuenta: Independizate que va siendo hora";
+		else if(edad >= 25 && !estudiante && !independizado){
+			cuenta = "Cuenta: Independizate que va siendo hora";
+		}
 		
-		else if(edad >= 25 && !estudiante && independizado) 
-			return "Cuenta: Bienvenido a la vida adulta";
+		else if(edad >= 25 && !estudiante && independizado){
+			cuenta = "Cuenta: Bienvenido a la vida adulta";
+		}
 		
-		else return "No existe cuenta bancaria que se ajuste a ese perfil";
+		else{
+			cuenta = "No existe cuenta bancaria que se ajuste a ese perfil";
+		}
+		
+		return cuenta;
 	}
 	
 }
