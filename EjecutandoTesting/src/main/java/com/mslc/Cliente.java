@@ -6,11 +6,11 @@ public class Cliente {
 	private boolean estudiante;
 	private boolean independizado;
 	
-	public Cliente(int edad, boolean estudiante, boolean independizado) {
+	public Cliente(int age, boolean student, boolean independent) {
 		super();
-		this.edad = edad;
-		this.estudiante = estudiante;
-		this.independizado = independizado;
+		this.edad = age;
+		this.estudiante = student;
+		this.independizado = independet;
 	}
 
 	public Cliente() {
