@@ -2,13 +2,13 @@ package com.mslc;
 
 public class AsignarCuenta {
 
-	final static int edad = 18;
-	final static boolean estudiante = true;
-	final static boolean independizado = true; 
+	final private static int EDAD = 18;
+	final private static boolean ESTUDIANTE = true;
+	final private static boolean INDEPENDIZADO = true; 
 
 	public static void main(String[]args) {
 		
-		Cliente cliente = new Cliente(edad, estudiante, independizado);
+		Cliente cliente = new Cliente(EDAD, ESTUDIANTE, INDEPENDIZADO);
 		
 		String cuenta = comprobar(cliente);
 		

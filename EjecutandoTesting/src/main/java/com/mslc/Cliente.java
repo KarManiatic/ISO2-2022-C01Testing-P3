@@ -10,7 +10,7 @@ public class Cliente {
 		super();
 		this.edad = age;
 		this.estudiante = student;
-		this.independizado = independet;
+		this.independizado = independent;
 	}
 
 	public Cliente() {
